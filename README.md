@@ -2,6 +2,14 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## First Using App
+
+For testing please login with account:
+email: eve.holt@reqres.in 
+password: [you can input anything]
+For Q2: To find out the minimum value of the maximum value of each nested array you can access link:
+http://localhost:3000/maxnumber
+
 ## Available Scripts
 
 In the project directory, you can run:
