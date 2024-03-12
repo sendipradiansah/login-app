@@ -62,14 +62,6 @@ const Login = () => {
     }
 }
 
-// const checkValid: any = useMemo(() => {
-//     if(email !== '' && password !== ''){
-//         return setCheckInput('Ready to submit...');
-//     }else{
-//         return setCheckInput('');
-//     }
-// }, [email, password]);
-
 const handleChangeEmail = useCallback((e: any) => {
     setEmail(e.target.value);
     setMsgEmail('');
