@@ -20,28 +20,29 @@ const Login = () => {
     console.log(email);
     console.log(password);
 
-    let valid = false;
+    let validEmail = false;
+    let validPassword = false;
 
     if (!email) {
         setMsgEmail('Required');
-        valid = false;
+        validEmail = false;
     }else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(email)) {
         setMsgEmail('Invalid email address');
-        valid = false;
+        validEmail = false;
     }else{
         setMsgEmail('');
-        valid = false;
+        validEmail = true;
     }
 
     if(!password) {
         setMsgPassword('Required');
-        valid = false;
+        validPassword = false;
     }else{
         setMsgPassword('');
-        valid = true;
+        validPassword = true;
     }
 
-    if(valid == true){
+    if(validEmail == true && validPassword == true){
         setLoading(true);
         await axios.post('https://reqres.in/api/login', {
             email: email,
